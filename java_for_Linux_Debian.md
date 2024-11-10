@@ -32,6 +32,7 @@ sudo apt install openjdk-17-jdk
 apt list --installed | grep openjdk
 sudo apt remove openjdk-11-jre-headless openjdk-11-jre
 sudo apt autoremove
+```
 
 ### 5. Set the Environment Variables for Java
 Edit the .bashrc file in your home directory and add the following definitions to the end of the file.
@@ -72,3 +73,5 @@ javac HelloWorld.java
 ```bash
 java HelloWorld
 ```
+
+[The Gnu song](https://www.youtube.com/watch?v=j53z6RfFb7U&ab_channel=PeterMc)

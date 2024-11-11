@@ -37,7 +37,7 @@ sudo apt autoremove
 ### 5. Set the Environment Variables for Java
 Edit the .bashrc file in your home directory and add the following definitions to the end of the file.
 To set these values for all system users, add the following changes to /etc/environment
-
+# this leads to LOGIN LOOP
 ```bash
 export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
 export PATH=$PATH:$JAVA_HOME/bin

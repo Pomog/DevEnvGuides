@@ -35,9 +35,11 @@ sudo apt autoremove
 ```
 
 ### 5. Set the Environment Variables for Java
-Edit the .bashrc file in your home directory and add the following definitions to the end of the file.
+Edit the .bashrc file (for individual users) in your home directory and add the following definitions to the end of the file.
 To set these values for all system users, add the following changes to /etc/environment
-# this leads to LOGIN LOOP
+# changing /etc/environment can lead to LOGIN LOOP
+# on LOGIN LOOP use different TTY (Ctrl-Alt-F3) and remove these Environment Variables
+# /etc/environment used for system-wide environment variables, and the shell starts up before some of the GUI or graphical login tools can load. Incorrect paths or commands in this file can prevent the system from properly launching the graphical environment, resulting in a login loop.
 ```bash
 export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
 export PATH=$PATH:$JAVA_HOME/bin
